@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+html,
+body {
+  margin: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#mediaQueryViewer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#mediaQueryViewer::after {
+  padding: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.cellWrapper {
+  padding: 8px;
+}
+
+#siteWrapper:nth-child(1) {
+  margin: auto;
+  padding-top: 10vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#playeDisplay {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.cell {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  font-size: 4rem;
+}
+
+.bottom {
+  border-bottom: 4px solid black;
+}
+
+.top {
+  border-top: 4px solid black;
+}
+
+.left {
+  border-left: 4px solid black;
+}
+
+.right {
+  border-right: 4px solid black;
+}
+
+@media only screen and (min-width: 768px) {
+
+  /* tablets and desktop */
+  #mediaQueryViewer::after {
+    background-color: blue;
+    content: 'desktop';
   }
-  to {
-    transform: rotate(360deg);
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  /* phones */
+  #mediaQueryViewer::after {
+    background-color: yellow;
+    content: 'phone';
+  }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+
+  /* portrait phones */
+  #mediaQueryViewer::after {
+    background-color: green;
+    content: 'portrait phones';
   }
 }
