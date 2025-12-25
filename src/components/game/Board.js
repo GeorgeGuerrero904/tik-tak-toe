@@ -1,5 +1,5 @@
 import Cell from "./Cell";
-import { useGameInfo } from '../components/context/gameContext'
+import { useGameInfo } from '../../context/gameContext'
 
 function Board() {
 

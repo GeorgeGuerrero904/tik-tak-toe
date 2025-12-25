@@ -8,7 +8,11 @@ function useGame() {
             ['', '', '']
         ],
         currentPlayer: 'x',
-        gameState: 'playing'
+        gameState: 'playing',
+        players: [
+            {name:'', symbol:''},
+            {name:'', symbol:''}
+        ]
     });
 
     function changePlayer() {

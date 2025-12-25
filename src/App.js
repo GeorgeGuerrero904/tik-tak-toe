@@ -1,15 +1,22 @@
 import './App.css';
-import Board from './components/Board.js';
-import { GameProvider } from './components/context/gameContext.js';
+import Board from './components/game/Board.js';
+import InitScreen from './components/initScreen/InitScreen.js';
+import { GameProvider } from './context/gameContext.js';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <GameProvider>
-      <div id='siteWrapper'>
-        <Board></Board>
-        <div id='mediaQueryViewer'></div>
-      </div>
-    </GameProvider>
+    <BrowserRouter>
+      <GameProvider>
+        <div id='siteWrapper'>
+          <Routes>
+            <Route path='/game' element={<Board />} />
+            <Route path='/' element={<InitScreen />}/>
+          </Routes>
+          <div id='mediaQueryViewer'></div>
+        </div>
+      </GameProvider>
+    </BrowserRouter>
   );
 }
 
