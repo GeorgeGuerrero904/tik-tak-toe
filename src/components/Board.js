@@ -1,9 +1,9 @@
 import Cell from "./Cell";
-import useGame from "./hooks/useGame";
+import { useGameInfo } from '../components/context/gameContext'
 
 function Board() {
 
-    const { game, playTurn } = useGame();
+    const { game, playTurn } = useGameInfo();
 
     return (
         <>

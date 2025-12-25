@@ -1,12 +1,15 @@
 import './App.css';
 import Board from './components/Board.js';
+import { GameProvider } from './components/context/gameContext.js';
 
 function App() {
   return (
-    <div id='siteWrapper'>
-      <Board></Board>
-      <div id='mediaQueryViewer'></div>
-    </div>
+    <GameProvider>
+      <div id='siteWrapper'>
+        <Board></Board>
+        <div id='mediaQueryViewer'></div>
+      </div>
+    </GameProvider>
   );
 }
 
