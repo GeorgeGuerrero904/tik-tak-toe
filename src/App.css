@@ -13,6 +13,17 @@ body {
   padding: 5px;
 }
 
+.playerBox {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .row {
   display: flex;
   justify-content: center;
