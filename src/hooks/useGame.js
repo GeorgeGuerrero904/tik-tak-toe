@@ -10,8 +10,8 @@ function useGame() {
         currentPlayer: 'x',
         gameState: 'playing',
         players: [
-            {name:'', symbol:''},
-            {name:'', symbol:''}
+            { name: '', symbol: '' },
+            { name: '', symbol: '' }
         ]
     });
 
@@ -57,9 +57,17 @@ function useGame() {
         });
     }
 
+    function setPlayers(players) {
+        setGame((prevGame) => ({
+            ...prevGame,
+            players: players
+        }));
+    }
+
     return {
         game,
-        playTurn
+        playTurn,
+        setPlayers
     };
 }
 
