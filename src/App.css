@@ -18,6 +18,55 @@ body {
   flex-direction: column;
   padding: 4rem;
   cursor: pointer;
+  background-color: #9191e9;
+  border-radius: 11em;
+  height: 26vh;
+  width: 12rem;
+  justify-content: space-evenly;
+}
+
+.playerInput {
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border: none;
+}
+
+.playerLabel {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cancelButton {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
+.submitButton {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #2d5d7b;
+  color: white;
+  cursor: pointer;
+}
+
+#vsBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px 30px;
+  font-size: 2rem;
 }
 
 .text-center {
@@ -34,11 +83,28 @@ body {
 }
 
 #siteWrapper:nth-child(1) {
-  margin: auto;
-  padding-top: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100vh;
+}
+
+.playerLeyend {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 1em;
+  padding: 10px;
+}
+
+.playerName {
+  text-transform: capitalize;
+}
+
+.playerSymbol {
+  text-transform: uppercase;
+  margin-top: 7px;
+  font-weight: bolder;
 }
 
 #playeDisplay {
