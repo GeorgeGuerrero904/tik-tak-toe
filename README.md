@@ -1,6 +1,14 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## next updates coming
+
+- [ ] Adding an animation for game won
+
+- [ ] add support for all kind of screens
+
+- [ ] solve vulnerability problems related to framework
+
+- [ ] (optional) add sparkles when a user wins
 
 ## Available Scripts
 
