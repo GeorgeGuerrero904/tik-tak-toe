@@ -7,7 +7,7 @@ function useGame() {
             ['', '', ''],
             ['', '', '']
         ],
-        currentPlayer: 'x',
+        currentPlayer: 0,
         gameState: 'playing',
         players: [
             { name: '', symbol: '' },
@@ -16,7 +16,8 @@ function useGame() {
     });
 
     function changePlayer() {
-        return game.currentPlayer === 'x' ? 'o' : 'x';
+        //if it's currentPlayer is 0  then asign 1 if 1 asign 0
+        return 1 - game.currentPlayer;
     }
 
     function someoneWon() {
@@ -47,10 +48,11 @@ function useGame() {
         if (currentBoard[x][y] !== '') {
             return;
         }
-        currentBoard[x][y] = game.currentPlayer;
+        currentBoard[x][y] = game.players[game.currentPlayer].symbol;
         const newGameState = someoneWon() ? 'win' : 'playing';
         const nextPlayer = newGameState === 'playing' ? changePlayer() : game.currentPlayer;
         setGame({
+            ...game,
             board: currentBoard,
             currentPlayer: nextPlayer,
             gameState: newGameState

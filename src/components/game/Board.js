@@ -1,14 +1,18 @@
 import Cell from "./Cell";
 import { useGameInfo } from '../../context/gameContext'
+import { useNavigate } from "react-router-dom";
 
 function Board() {
 
     const { game, playTurn } = useGameInfo();
-
+    const navigate = useNavigate();
+    if(!game.players[0].name || !game.players[1].name){
+        navigate('/');
+    }
     return (
         <>
             <div id="playeDisplay">
-                <h1>{game.gameState !== 'playing' ? `${game.currentPlayer} Won` : `Turn ${game.currentPlayer}`}</h1>
+                <h1>{game.gameState !== 'playing' ? `${game.players[game.currentPlayer].name} Won` : `${game.players[game.currentPlayer].name}'s Turn (${game.players[game.currentPlayer].symbol})`}</h1>
             </div>
             <table>
                 <tbody>
