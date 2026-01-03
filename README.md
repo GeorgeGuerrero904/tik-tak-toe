@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-## next updates coming
+## Next updates coming
 
 - [ ] Adding an animation for game won
 
