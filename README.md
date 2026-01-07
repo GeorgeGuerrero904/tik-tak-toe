@@ -2,8 +2,6 @@
 
 ## Next updates coming
 
-- [ ] Adding an animation for game won
-
 - [ ] add support for all kind of screens
 
 - [ ] solve vulnerability problems related to framework

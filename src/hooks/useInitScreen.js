@@ -32,7 +32,7 @@ export function useInitScreen() {
         if (!!symbol) {
             return symbol === 'x' ? 'o' : 'x';
         }
-        return 'x';
+        return Math.round(Math.random()) === 1 ? 'x' : 'o';
     }
 
     return { formAction, errors, initPlayers };
