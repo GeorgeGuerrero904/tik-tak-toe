@@ -12,14 +12,14 @@ function InitScreen() {
             <div className="row">
                 <div className="playerBox">
                     <label htmlFor="playerOne" className="playerLabel"> Player 1</label>
-                    {!!initPlayers[0].name ? <Player player={initPlayers[0]} /> : <input type="text" name="playerOne" id="playerOne" className="playerInput" />}
+                    {!!initPlayers[0].name ? <Player player={initPlayers[0]} /> : <input type="text" name="playerOne" autoComplete="off" id="playerOne" className="playerInput" />}
                 </div>
                 <div id="vsBox">
                     vs
                 </div>
                 <div className="playerBox">
                     <label htmlFor="playerTwo" className="playerLabel">Player 2</label>
-                    {!!initPlayers[1].name ? <Player player={initPlayers[1]} /> : <input type="text" name="playerTwo" id="playerTwo" className="playerInput" />}
+                    {!!initPlayers[1].name ? <Player player={initPlayers[1]} /> : <input type="text" name="playerTwo" autoComplete="off" id="playerTwo" className="playerInput" />}
                 </div>
             </div>
             {errors.length > 0 ? errors.map((error, index) => (

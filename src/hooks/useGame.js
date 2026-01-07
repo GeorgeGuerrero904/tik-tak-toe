@@ -81,12 +81,24 @@ function useGame() {
     function gameInitCorrectly() {
         return (!!game.players[0].name && !!game.players[1].name);
     }
-
+    function resetGame() {
+        setGame({
+            board: [
+                [{ winner: false, move: '' }, { winner: false, move: '' }, { winner: false, move: '' }],
+                [{ winner: false, move: '' }, { winner: false, move: '' }, { winner: false, move: '' }],
+                [{ winner: false, move: '' }, { winner: false, move: '' }, { winner: false, move: '' }]
+            ],
+            currentPlayer: 0,
+            gameState: 'playing',
+            players: game.players
+        });
+    }
     return {
         game,
         playTurn,
         setPlayers,
-        gameInitCorrectly
+        gameInitCorrectly,
+        resetGame
     };
 }
 

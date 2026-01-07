@@ -1,13 +1,3 @@
-# Getting Started with Create React App
-
-## Next updates coming
-
-- [ ] add support for all kind of screens
-
-- [ ] solve vulnerability problems related to framework
-
-- [ ] (optional) add sparkles when a user wins
-
 ## Available Scripts
 
 In the project directory, you can run:
